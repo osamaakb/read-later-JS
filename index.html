@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<!-- navbar -->
+<nav class="navbar bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="navbar-brand text-white">Read Later</span>
+        </div>
+        <div class="text-right">
+            <button type="button" class="btn btn-default navbar-btn">Sign in/up</button>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container mt-4">
+
+    <!-- book form -->
+    <div class="m-3">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <label for="name">Book name</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Book Name"
+                        required>
+                </div>
+                <div class="col">
+                    <label for="author">Author</label>
+                    <input type="text" class="form-control" id="author" aria-describedby="author" placeholder="Author"
+                        required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-dark mt-3">Add Book</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <h4 class="mb-3">Your read later books</h4>
+
+    <!-- books list -->
+    <div class="books-list"></div>
+
+
+    <!-- book item -->
+    <!-- you will use this in your JS code but this is a ready template for the book item -->
+    <div class="shadow p-3 mb-5 bg-white rounded d-flex align-items-center justify-content-between ">
+        <div>
+            <p class="font-weight-bold">book title</p>
+            <p>author here</p>
+        </div>
+        <div>
+            <a id="deleteBook" href="">
+                <img src="trash.svg" alt="trash">
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+
+<!-- Firebase & Firestore-->
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-firestore.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBNGYwp9XI5C2jbsYZjOJc3ydVN-2g3vjI",
+        authDomain: "readlater-708be.firebaseapp.com",
+        databaseURL: "https://readlater-708be.firebaseio.com",
+        projectId: "readlater-708be",
+        storageBucket: "readlater-708be.appspot.com",
+        messagingSenderId: "264923569873",
+        appId: "1:264923569873:web:dbf0fb4f38757115d52ff0",
+        measurementId: "G-Z7YC9XXFKE"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();    
+</script>
+
+<script src="index.js"></script>
+
+</html>
