@@ -8,7 +8,7 @@ You will learn how to use firebase firestore database and authentication
 
 You have the HTML ready for you and Firebase configurations are also set up for you so you will only be doing the JavaScript part.
 
-- create a function that takes a book object contains (title, author, date created) and add it to the firestore database, more info [here](https://firebase.google.com/docs/firestore/manage-data/add-data#add_a_document)
+- create a function that takes a book object contains (title, author, created_date) and add it to the firestore database, more info [here](https://firebase.google.com/docs/firestore/manage-data/add-data#add_a_document)
 - create a function that gets the books from the firestore database, more info [here](https://firebase.google.com/docs/firestore/query-data/get-data)
 - create a function that takes the book and delete it from the database, more info [here](https://firebase.google.com/docs/firestore/manage-data/delete-data#delete_documents)
 

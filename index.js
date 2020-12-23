@@ -1,3 +1,3 @@
 const db = firebase.firestore();
 
-// right down you javascript code
+// right down your javascript code
